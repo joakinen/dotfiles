@@ -30,8 +30,8 @@ if [ ! -f "/etc/installurl" ]; then
 fi
 
 packages="${packages} dmenu curl sakura vim-8.0.0987p0-no_x11-perl-python3-ruby"
-packages="${packages} xclip go redshift bash i3 rxvt-unicode ectags w3m"
-packages="${packages} cabextract newsbeuter xbanish qutebrowser shellcheck"
+packages="${packages} xclip go redshift bash i3 rxvt-unicode ectags w3m-0.5.3p5"
+packages="${packages} cabextract newsbeuter xbanish qutebrowser"
 
 for package in ${packages}
 do
