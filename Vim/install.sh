@@ -94,3 +94,10 @@ if [ ! -d "${BUNDLE_ROOT}/supertab" ]; then
     git clone git://github.com/ervandew/supertab.git "${BUNDLE_ROOT}/supertab"
 fi
 
+
+# Delimitmate
+if [ ! -d "${BUNDLE_ROOT}/delimitMate" ]; then
+    git clone git://github.com/vim-scripts/delimitMate.vim "${BUNDLE_ROOT}/delimitMate"
+fi
+
+
