@@ -2,48 +2,6 @@
 !! COLORS
 !!
 
-*background: #002b36
-*foreground: #657b83
-*cursorColor: #93a1a1
-
-*fading:                40
-*fadeColor:             #002b36
-!*cursorColor:           #93a1a1
-*pointerColorBackground:#586e75
-*pointerColorForeground:#93a1a1
-
-!! black dark/light
-*color0:                #073642
-*color8:                #002b36
-
-!! red dark/light
-*color1:                #dc322f
-*color9:                #cb4b16
-
-!! green dark/light
-*color2:                #859900
-*color10:               #586e75
-
-!! yellow dark/light
-*color3:                #b58900
-*color11:               #657b83
-
-!! blue dark/light
-*color4:                #268bd2
-*color12:               #839496
-
-!! magenta dark/light
-*color5:                #d33682
-*color13:               #6c71c4
-
-!! cyan dark/light
-*color6:                #2aa198
-*color14:               #93a1a1
-
-!! white dark/light
-*color7:                #eee8d5
-*color15: #fdf6e3
-
 
 !!
 !! XTERM
@@ -57,6 +15,7 @@ XTerm*utf8: 1
 !! Copy selection to X CLIPBOARD and X PRIMARY.
 XTerm*selectToClipboard: true
 XTerm*scrollBar: false
+xterm*BorderWidth: 0
 
 XTerm*font: xft:Go Mono:pixelsize=12
 XTerm*font1: xft:Go Mono:pixelsize=9
@@ -74,10 +33,15 @@ Xft*antialias: true
 Xft*dpi: 96
 XTerm.vt100.boldFont: xft:Go Mono:pixelsize=12
 
-urxvt*font: xft:Go Mono:pixelsize=10
-! Disable bold font, revent to standard font.
+URxvt*termName: screen-256color
+urxvt*font: xft:Go Mono:pixelsize=12
+! Disable bold font, revert to standard font.
 urxvt.boldFont:
 urxvt.scrollBar: false
 urxvt*tintColor: Gray
 urxvt*shading: 20
 urxvt*fading: 0
+!!URxvt.letterSpace:1
+URxvt.letterSpace:-1
+URxvt.iso14755: false
+URxvt.iso14755_52: false

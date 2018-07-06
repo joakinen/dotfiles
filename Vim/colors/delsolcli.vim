@@ -9,6 +9,25 @@ endif
 set t_Co=256
 let g:colors_name = "delsolcli"
 
+
+""
+"" RESET
+""
+
+hi clear Normal
+hi clear goTypeName
+hi clear goFunction
+hi clear Identifier
+hi clear Special
+hi clear Statement
+hi clear Constant
+hi clear Operator
+hi clear PreProc
+hi clear Conditional
+hi clear Repeat
+hi clear String
+
+
 "hi CTagsMember -- no settings --
 "hi CTagsGlobalConstant -- no settings --
 "hi Ignore -- no settings --
@@ -42,8 +61,8 @@ hi PMenuSbar guifg=NONE guibg=#848688 guisp=#848688 gui=NONE ctermfg=NONE ctermb
 hi Identifier guifg=#ffffff guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 hi SpecialChar guifg=#BD9800 guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 "" if, then, else
-hi Conditional guifg=#BD9800 guibg=NONE guisp=NONE gui=bold ctermfg=NONE ctermbg=NONE cterm=bold
-hi StorageClass guifg=#536991 guibg=NONE guisp=NONE gui=bold ctermfg=NONE ctermbg=NONE cterm=bold
+hi Conditional guifg=#BD9800 guibg=NONE guisp=NONE gui=bold ctermfg=NONE ctermbg=NONE cterm=NONE
+hi StorageClass guifg=#536991 guibg=NONE guisp=NONE gui=bold ctermfg=NONE ctermbg=NONE cterm=NONE
 hi Todo guifg=#F9F9FF guibg=#BD9800 guisp=#BD9800 gui=NONE ctermfg=NONE ctermbg=1 cterm=NONE
 hi Special guifg=#ffec16 guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 hi LineNr guifg=#BD9800 guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
@@ -53,7 +72,7 @@ hi PMenuSel guifg=#192224 guibg=#BD9800 guisp=#BD9800 gui=NONE ctermfg=235 cterm
 hi Search guifg=#192224 guibg=#BD9800 guisp=#BD9800 gui=NONE ctermfg=235 ctermbg=1 cterm=NONE
 "" Also important
 hi Delimiter guifg=#BD9800 guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
-hi Statement guifg=#ffffff guibg=NONE guisp=NONE gui=bold ctermfg=NONE ctermbg=NONE cterm=bold
+hi Statement guifg=#ffffff guibg=NONE guisp=NONE gui=bold ctermfg=NONE ctermbg=NONE cterm=NONE
 hi SpellRare guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=189 ctermbg=235 cterm=underline
 ""hi Comment guifg=#aaaaaa guibg=NONE guisp=NONE gui=NONE ctermfg=100 ctermbg=NONE cterm=NONE
 hi Character guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
@@ -91,7 +110,7 @@ hi Tag guifg=#BD9800 guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE ct
 ""hi String guifg=#dadada guibg=#444444 guisp=#444444 gui=NONE ctermfg=253 ctermbg=238 cterm=NONE
 hi PMenuThumb guifg=NONE guibg=#a4a6a8 guisp=#a4a6a8 gui=NONE ctermfg=NONE ctermbg=248 cterm=NONE
 hi MatchParen guifg=#BD9800 guibg=NONE guisp=NONE gui=bold ctermfg=11 ctermbg=NONE cterm=NONE
-hi Repeat guifg=#BD9800 guibg=NONE guisp=NONE gui=bold ctermfg=1 ctermbg=NONE cterm=NONE
+hi Repeat guifg=#BD9800 guibg=NONE guisp=NONE gui=bold ctermfg=NONE ctermbg=NONE cterm=NONE
 hi SpellBad guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=189 ctermbg=235 cterm=underline
 hi Directory guifg=#536991 guibg=NONE guisp=NONE gui=bold ctermfg=60 ctermbg=NONE cterm=bold
 hi Structure guifg=#536991 guibg=NONE guisp=NONE gui=bold ctermfg=NONE ctermbg=NONE cterm=bold
@@ -111,9 +130,15 @@ hi markdownHeadingDelimiter guifg=#BD9800 guibg=NONE guisp=NONE gui=NONE ctermfg
 hi Constant    ctermfg=100
 hi Exception   ctermfg=NONE
 hi Function    ctermfg=100
-hi String      ctermfg=NONE ctermbg=238
+hi String      ctermfg=Black ctermbg=8
 hi Keyword     ctermfg=100
 hi Comment     ctermfg=240 ctermbg=NONE
 hi Underlined  ctermfg=240 ctermbg=NONE
 hi Float       ctermfg=240 ctermbg=NONE
 
+
+""
+"" LINKS
+""
+
+hi link goString String

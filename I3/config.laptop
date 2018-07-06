@@ -20,7 +20,7 @@ set $blue     #007fbf
 ## APPLICATIONS
 ##
 
-set $terminal_app     "sakura -t main-term"
+set $terminal_app     "urxvt"
 set $app_launcher     "dmenu_run -l 1 -nb '#002b36' -nf '#657b83' -sb '#002b36' -sf '#859900' -p ':: '"
 set $status_app       "i3status"
 
@@ -86,7 +86,7 @@ assign [class="Slack"]                $msg_workspace
 bindsym ctrl+shift+f [title="Mozilla Firefox"] focus
 bindsym ctrl+shift+b [title="Google Chrome"]   focus
 bindsym ctrl+shift+w [title="qutebrowser"]     focus
-bindsym ctrl+shift+t [title="main-term"]       focus
+bindsym ctrl+shift+t [title="urxvt"]           focus
 bindsym ctrl+shift+h [title="Slack"]           focus
 
 

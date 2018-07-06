@@ -69,18 +69,20 @@ let g:go_list_type = "quickfix"
 "
 " APPEARANCE
 "
-set background=dark
-colorscheme solarized
+set background=light
+" colorscheme solarized
 
 " Reset values.
-hi clear goTypeName
-hi clear goFunction
-hi clear Identifier
-hi clear Special
-hi clear Statement
-hi clear Normal
-hi clear Constant
-hi clear Operator
+" hi clear goTypeName
+" hi clear goFunction
+"hi clear Identifier
+"hi clear Special
+"hi clear Statement
+"hi clear Normal
+"hi clear Constant
+"hi clear Operator
+"hi clear PreProc
+"hi clear Conditional
 
 "
 " COLOR NAMES
@@ -107,47 +109,56 @@ hi clear Operator
 
 
 " OpenBSD terminal requires ctermbg=NONE or equivalent.
-hi Normal ctermfg=12 ctermbg=8
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE
-hi string ctermfg=10 ctermbg=DarkGrey
+" hi Normal ctermfg=12 ctermbg=9
+" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE
+" hi string ctermfg=10 ctermbg=DarkGrey
 
-" au VimEnter * syntax keyword Statement lambda conceal cchar=λ
-" au VimEnter * hi! link Conceal Statement
-" au VimEnter * set conceallevel=2
 
-hi StatusLine                  ctermfg=3     ctermbg=NONE     cterm=NONE
-" hi markdownItalic              ctermfg=NONE ctermbg=NONE cterm=NONE
-hi goString ctermfg=11 ctermbg=0 cterm=NONE
+" hi StatusLine                  ctermfg=3     ctermbg=NONE     cterm=NONE
+" hi goString ctermfg=11 ctermbg=0 cterm=NONE
+hi link goString Normal
+" hi link goComment Comment
+" hi Comment ctermfg=12 ctermbg=8 cterm=italic
 
-hi goFunction ctermfg=2 ctermbg=NONE
-hi goTypeName ctermfg=2 ctermbg=NONE
+" hi goFunction ctermfg=2 ctermbg=NONE
+hi link goFunction     Normal
+" hi goTypeName ctermfg=2 ctermbg=NONE
+hi goTypeName ctermfg=NONE ctermbg=NONE
+hi link goTypeName     Normal
 hi link goDecimalInt   Normal
 hi link goSignedInts   Normal
 hi link goUnsignedInts Normal
 hi link goBoolean      Normal
 hi link goType         Normal
-hi link goTypeConstructor Normal
-hi link goReceivertype    Normal
+" hi link goTypeConstructor Normal
+" hi link goReceivertype    Normal
+hi! String ctermfg=red ctermbg=NONE
 hi link goRawString    String
+hi goString  ctermfg=red  ctermbg=NONE
+hi! goRawString  ctermfg=NONE ctermbg=NONE
+
 hi link Constant       String
 hi link goFormatSpecifier Normal
-hi link goEscapeC      Normal
-hi link markdownItalic Normal
-hi link PreProc        String
-hi link shDerefVar     String
+" hi link goEscapeC      Normal
+" hi link markdownItalic Normal
+" hi link PreProc        String
+" hi link shDerefVar     String
+hi Identifier ctermfg=NONE ctermbg=NONE
 hi link Identifier     Normal
 hi link Special        Normal
 hi link Statement      Normal
 
-hi Special ctermfg=12 ctermbg=8
-hi! Operator ctermfg=Blue ctermbg=8
+" hi Special ctermfg=12 ctermbg=8
+" hi! Operator ctermfg=Blue ctermbg=8
+hi Operator ctermfg=NONE ctermbg=NONE
+hi link Operator Normal
 
 " Tagbar
-hi TagbarKind ctermfg=NONE cterm=NONE
-hi TagbarScope ctermfg=NONE cterm=NONE
-hi TagbarSignature ctermfg=NONE cterm=NONE
-hi TagbarType ctermfg=NONE cterm=NONE
-hi ErrorMsg ctermfg=NONE cterm=NONE
+" hi TagbarKind ctermfg=NONE cterm=NONE
+" hi TagbarScope ctermfg=NONE cterm=NONE
+" hi TagbarSignature ctermfg=NONE cterm=NONE
+" hi TagbarType ctermfg=NONE cterm=NONE
+" hi ErrorMsg ctermfg=NONE cterm=NONE
 
 "
 " KEYS
@@ -262,13 +273,3 @@ autocmd FileType go nmap <Leader>s <Plug>(go-def-split)
 augroup END
 
 
-" Tmux {{{
-" allows cursor change in tmux mode
-if exists('$TMUX')
-    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
-" }}}
