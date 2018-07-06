@@ -18,11 +18,6 @@ EDITOR="vim"
 VISUAL="${EDITOR}"
 export EDITOR VISUAL
 
-CHARSET="UTF-8"
-LANG="en_US.UTF-8"
-LC_ALL="en_US.UTF-8"
-export CHARSET LANG LC_ALL
-
 TMPDIR="${HOME}/tmp"
 XDG_CONFIG_HOME="${HOME}/.config"
 XDG_RUNTIME_DIR="${TMPDIR}/runtime"
@@ -44,12 +39,6 @@ fi
 if [ ! -z DISPLAY ]; then
   DISPLAY=":0"
   export DISPLAY
-fi
-
-## OpenBSD fixes.
-if [ "$(uname)" = "OpenBSD" ]; then
-    TERM="xterm"
-    export TERM
 fi
 
 
@@ -129,7 +118,7 @@ exit_code() {
 }
 
 
-PS1="\$(tput setaf 2)::\$(tput sgr0)\$(exit_code) \$(git_branch)\$(git_status) \$(basename \${PWD})\$(tput sgr0)# "
+PS1=":: \$(git_branch)\$(git_status) \$(basename \${PWD})# "
 PS2=">> "
 PS3=">>> "
 PS4=">>>> "
