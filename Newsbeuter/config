@@ -31,7 +31,7 @@ articlelist-format "%D %f  %?T?|%-17T| ?%t"
 feedlist-format "%11u  %t"
 
 highlight feedlist    "^  *[0-9]+  *N  "                    default default
-highlight articlelist "^  *[0-9]+  *N  "                    color72 default
+highlight articlelist "^  *[0-9]+  *N  "                    default default
 
 # The basic configuration syntax is:
 #
@@ -52,11 +52,11 @@ highlight articlelist "^  *[0-9]+  *N  "                    color72 default
 #   - 256 colors
 #   - See http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 
-color background color243 default 
-color article            default default
-color info               default default dim
-color listnormal         default default
-color listnormal_unread  default default 
-color listfocus          green   default 
-color listfocus_unread   green   default
+#color background color243 default 
+#color article            default default
+#color info               default default dim
+#color listnormal         default default
+#color listnormal_unread  default default 
+color listfocus          default  default 
+color listfocus_unread   default  default
 
